@@ -3,15 +3,18 @@
     Layout = "_Layout";
 }
 
-
-    <form method="post" action="~/Home/RecuperarContraseña">
-
-        <h2>Recuperar Contraseña</h2>        
-        <label >Correo electrónico:</label>
-        <input asp-for=" CorreoElectronico"  type="email" />
+<h2 class="titulo">Recuperar Contraseña</h2>
+<div class="divMain">
+    <form class="formularios" method="post" action="~/Home/RecuperarContraseña">
+     
+        <label>Correo electrónico:</label>
+        <input asp-for=" CorreoElectronico" type="email" />
         <p>@Html.ValidationSummary()</p>
-        <input type="submit" value="Recuperar contraseña" />
-        <a href="~/Home/Index">Cancelar</a>
+        <input type="submit" class="boton" value="Recuperar" />
+        <a href="~/Home/Index" class="link">
+            <input type="button" class="boton" value="Cancelar" />
+        </a>
     </form>
+</div>
 
 

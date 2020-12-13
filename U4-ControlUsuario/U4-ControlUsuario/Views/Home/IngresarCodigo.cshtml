@@ -5,14 +5,14 @@
     Layout = "_Layout";
 }
 
-<form method="post" action="~/Home/IngresarCodigo">
-
-    <h2>Validar Codigo</h2>
-    <p>Ingrese el codigo que le ha sido enviado al correo.</p>
-    <input type="hidden" asp-for="Id" />
-    <label>Ingrese Código:</label>
-    <input type="text" asp-for="codigoConfirmar" required/>
-    <p>@Html.ValidationSummary() </p>
-    <input type="submit" value="Aceptar" />
-
-</form>
+<h2 class="titulo">Ingresa tu código</h2>
+<div class="divMain">
+    <form class="formularios" method="post" action="~/Home/IngresarCodigo">
+        <p>Ingrese el codigo que le ha sido enviado al correo.</p>
+        <input type="hidden" asp-for="Id" />
+        <label>Código recibido:</label>
+        <input type="text" asp-for="codigoConfirmar" required />
+        <p>@Html.ValidationSummary() </p>
+        <input type="submit" class="boton" value="Aceptar" />
+    </form>
+</div>

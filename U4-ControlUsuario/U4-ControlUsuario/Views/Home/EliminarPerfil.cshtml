@@ -3,12 +3,15 @@
     Layout = "_Layout";
 }
 
-<form method="post" action="~/Home/EliminarPerfil">
-    <input type="hidden" asp-for="Id" />
-    <h1>Eliminar Perfil</h1>
-    <h3>¿Deses eliminar tu cuenta?</h3>        
-        <input type="submit" value="Aceptar" />
-        <a href="~/Home/Index">
-            <input type="button" value="Cancelar" />
-        </a>    
-</form>
+
+<h1 class="titulo">Eliminar Perfil</h1>
+<div class="divMain">
+    <form class="formularios" method="post" action="~/Home/EliminarPerfil">
+        <input type="hidden" asp-for="Id" />
+        <h3>¿Deses eliminar tu cuenta?</h3>
+        <input type="submit" value="Aceptar" class="boton" />
+        <a href="~/Home/Index" class="link">
+            <input type="button" value="Cancelar" class="boton"/>
+        </a>
+    </form>
+</div>

@@ -113,6 +113,7 @@ namespace U4_ControlUsuario.Controllers
                         int _min = 0000;
                         int _max = 9999;
                         vm.NuevoUsuario.Codigo = r.Next(_min, _max).ToString("0000");
+                        vm.NuevoUsuario.Activo = 0;
                         vm.NuevoUsuario.Contrasena = Hasheo(vm.NuevoUsuario.Contrasena);
                         repos.Insert(vm.NuevoUsuario);
                         MailMessage message = new MailMessage();

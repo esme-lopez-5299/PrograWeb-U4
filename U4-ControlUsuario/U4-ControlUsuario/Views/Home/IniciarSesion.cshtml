@@ -3,19 +3,35 @@
     Layout = "_Layout";
 }
 
+<h3 class="titulo">Iniciar sesión</h3>
+<div class="divMain">
+    <form class="formularios" action="~/Home/IniciarSesion" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label>Correo electrónico:</label>
+                </td>
+                <td>
+                    <input class="field" type="text" name="correo" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password:</label>
+                </td>
+                <td>
+                    <input class="field" type="password" name="contraseña" />
+                </td>
+            </tr>
+        </table>
+        <input name="persistencia" type="checkbox" value="True" />
+        <label for="persistencia">Mantener la sesión iniciada</label><br /><br />
+        <input class="boton" type="submit" value="Iniciar" />
+        <p>@Html.ValidationSummary()</p>
+        <label>¿No tienes una cuenta?</label>
+        <a href="~/Home/Registrarse" class="link">¡Regístrate!</a><br />
+        <label>¿Olvidaste tu contraseña?</label>
+        <a href="~/Home/RecuperarContraseña" class="link">Recuperar contraseña</a>
+    </form>
 
-<form class="formularios" action="~/Home/IniciarSesion" method="post">
-    <h3>Iniciar sesión</h3>
-    <label>Correo electrónico:</label>
-    <input type="text" name="correo" />
-    <label>Password:</label>
-    <input type="password" name="contraseña" /><br />
-    <input name="persistencia" type="checkbox" value="True" /><label for="persistencia">Mantener la sesión iniciada</label>
-    <input type="submit" value="Iniciar" />
-    <p>@Html.ValidationSummary()</p>
-    <label>¿No tienes una cuenta?</label>
-    <a href="~/Home/Registrarse" >¡Regístrate!</a>
-    <label>¿Olvidaste tu contraseña?</label><a href="~/Home/RecuperarContraseña">Recuperar contraseña</a>
-</form>
-
-
+</div>

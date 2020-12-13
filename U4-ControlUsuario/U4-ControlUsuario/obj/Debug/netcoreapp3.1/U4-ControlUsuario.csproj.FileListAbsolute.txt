@@ -117,7 +117,6 @@ C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\P
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\U4-ControlUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\U4-ControlUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\IngresarCodigo.cshtml.g.cs
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\U4-ControlUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\IniciarSesion.cshtml.g.cs
-C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\U4-ControlUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\LogOut.cshtml.g.cs
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\U4-ControlUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\Rechazado.cshtml.g.cs
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\U4-ControlUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\RecuperarContraseña.cshtml.g.cs
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\U4-ControlUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registrarse.cshtml.g.cs

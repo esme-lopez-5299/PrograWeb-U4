@@ -6,6 +6,7 @@
 
 *{
     margin:0;
+    font-family:Arial;
 }
 
 html{
@@ -41,7 +42,7 @@ header h1{
  }
 
 .formularios{
-    width:30%;    
+    width:40%;    
     margin:auto;
 }
 
@@ -53,14 +54,17 @@ header h1{
     font-family: Arial;
 }
 
+
+.link{
+    text-decoration:none;
+    color:darkblue;
+}
+
 main form{
     margin:0;
 }
 
-main .formularios table tr td
-{
-    
-}
+
 main .formularios table tr td label {
     margin-top:0px;
     font-family:Arial;
@@ -79,14 +83,13 @@ main .formularios table tr td label {
     margin-top:15px;
 }
 
-.boton{
-    margin:auto;
-    display:block;
-    width:100px;
-    height:40px;
-    background-color:lavender;
-    border-color:purple;
-    
+.boton {
+    display: block;
+    margin-bottom:10px;
+    width: 120px;
+    height: 35px;
+    background-color: lavender;
+    border-color: purple;
 }
 
 

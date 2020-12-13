@@ -3,16 +3,26 @@
     Layout = "_Layout";
 }
 
-<form method="post" action="~/Home/ResetContraseña">
-    <input type="hidden" asp-for="NuevoUsuario.Id" />
-    <label>Reset Password</label>
-    <label>Nueva Contraseña:</label>
-    <input type="password" asp-for="NuevoUsuario.Contrasena" />
-    <label>Confirmar Contraseña:</label>
-    <input type="password" asp-for="ConfirmarContraseña" required  />
-    <p>@Html.ValidationSummary()</p>    
-        <input type="submit" value="Reset password" />
-        <a  href="~/Home/Index">
-            <input type="button" value="Cancelar" />
-        </a>    
-</form>
+
+<h2 class="titulo">Reset Password</h2>
+<div >
+    <form class="formularios" method="post" action="~/Home/ResetContraseña">
+        <input type="hidden" asp-for="NuevoUsuario.Id" />
+        <table>
+            <tr>
+                <td>  <label>Nueva Contraseña:</label></td>
+                <td> <input type="password" class="field" asp-for="NuevoUsuario.Contrasena" /><br /><br /></td>
+            </tr>
+            <tr>
+                <td> <label>Confirmar Contraseña:</label></td>
+                <td> <input type="password" class="field" asp-for="ConfirmarContraseña" required /></td>
+            </tr>
+        </table>                  
+       
+        <p>@Html.ValidationSummary()</p>
+        <input type="submit" value="Reset password" class="boton" />
+        <a href="~/Home/Index" class="link">
+            <input type="button" class="boton" value="Cancelar" />
+        </a>
+    </form>
+</div>
