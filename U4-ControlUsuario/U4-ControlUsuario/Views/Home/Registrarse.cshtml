@@ -1,0 +1,51 @@
+﻿@model U4_ControlUsuario.Models.ViewModels.RegistrarseViewModel
+@{
+    Layout = "_Layout";
+}
+
+
+<h3 class="titulo">Regístrate</h3>
+<div class="divMain">
+    <form method="post" action="~/Home/Registrarse" class="formularios">
+        <table>
+            <tr>
+                <td>
+                    <label>Username:</label>
+                </td>
+                <td>
+                    <input asp-for="NuevoUsuario.Username" class="field" type="text" /> <br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Correo electrónico</label>
+                </td>
+                <td>
+                    <input asp-for="NuevoUsuario.CorreoElectronico" class="field" type="email" /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Contraseña:</label>
+                </td>
+                <td>
+                    <input asp-for="NuevoUsuario.Contrasena" class="field" type="password" /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirmar contraseña:</label>
+                </td>
+                <td>
+                    <input asp-for="ConfirmarContraseña" class="field" type="password" /><br /><br />
+                </td>
+            </tr>
+        </table>
+        <p>
+            @Html.ValidationSummary()
+        </p>
+        <input class="boton" type="submit" value="¡Registrate!" />
+        <a href="~/Home/RecuperarContraseña">¿Haz olvidado tu contraseña?</a>
+    </form>
+</div>
+

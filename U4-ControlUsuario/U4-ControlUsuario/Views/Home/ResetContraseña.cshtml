@@ -1,0 +1,18 @@
+﻿@model U4_ControlUsuario.Models.ViewModels.RegistrarseViewModel
+@{
+    Layout = "_Layout";
+}
+
+<form method="post" action="~/Home/ResetContraseña">
+    <input type="hidden" asp-for="NuevoUsuario.Id" />
+    <label>Reset Password</label>
+    <label>Nueva Contraseña:</label>
+    <input type="password" asp-for="NuevoUsuario.Contrasena" />
+    <label>Confirmar Contraseña:</label>
+    <input type="password" asp-for="ConfirmarContraseña" required  />
+    <p>@Html.ValidationSummary()</p>    
+        <input type="submit" value="Reset password" />
+        <a  href="~/Home/Index">
+            <input type="button" value="Cancelar" />
+        </a>    
+</form>

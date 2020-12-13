@@ -1,0 +1,17 @@
+﻿@model U4_ControlUsuario.Models.Usuario
+@{
+    Layout = "_Layout";
+}
+
+
+    <form method="post" action="~/Home/RecuperarContraseña">
+
+        <h2>Recuperar Contraseña</h2>        
+        <label >Correo electrónico:</label>
+        <input asp-for=" CorreoElectronico"  type="email" />
+        <p>@Html.ValidationSummary()</p>
+        <input type="submit" value="Recuperar contraseña" />
+        <a href="~/Home/Index">Cancelar</a>
+    </form>
+
+

@@ -1,0 +1,18 @@
+﻿@model U4_ControlUsuario.Models.ViewModels.IngresarCodigoViewModel
+
+
+@{
+    Layout = "_Layout";
+}
+
+<form method="post" action="~/Home/IngresarCodigo">
+
+    <h2>Validar Codigo</h2>
+    <p>Ingrese el codigo que le ha sido enviado al correo.</p>
+    <input type="hidden" asp-for="Id" />
+    <label>Ingrese Código:</label>
+    <input type="text" asp-for="codigoConfirmar" required/>
+    <p>@Html.ValidationSummary() </p>
+    <input type="submit" value="Aceptar" />
+
+</form>

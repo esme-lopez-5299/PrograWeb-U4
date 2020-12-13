@@ -1,0 +1,136 @@
+﻿body
+{
+    margin:0px;
+   
+}
+
+*{
+    margin:0;
+}
+
+html{
+ 
+    margin:0px;
+}
+
+header{
+    
+    width:100%;
+    background-color:black;
+}
+
+@font-face {
+    font-family: fuenteDunkin;
+    src: url("Dunkin.otf");
+}
+
+
+header h1{
+    margin: 0px;
+    font-size:30px;    
+    text-align:center;
+    font-family:fuenteDunkin;
+    letter-spacing:5px;
+   color:white;
+}
+
+ main{
+     margin-top:0;
+     width:100%;
+     background-color:white;
+ }
+
+.formularios{
+    width:30%;    
+    margin:auto;
+}
+
+.titulo {
+    align-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
+    font-family: Arial;
+}
+
+main form{
+    margin:0;
+}
+
+main .formularios table tr td
+{
+    
+}
+main .formularios table tr td label {
+    margin-top:0px;
+    font-family:Arial;
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.divMain{
+    margin:auto;
+}
+
+
+.field{
+   
+    margin-top:15px;
+}
+
+.boton{
+    margin:auto;
+    display:block;
+    width:100px;
+    height:40px;
+    background-color:lavender;
+    border-color:purple;
+    
+}
+
+
+footer {
+    position: fixed;
+z-index: 100;
+    top: 80%;
+    left: 0;
+    clear: both;
+    margin-top: 5%;
+    padding-top: 20px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.redes-sociales {
+    width: 100%;
+    text-align: center;
+    /*padding-left:40%;*/
+}
+
+    .redes-sociales i {
+        color: white;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .redes-sociales label {
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+footer h3 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+
