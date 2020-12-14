@@ -190,11 +190,10 @@ namespace u4_2_RolesUsuario.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarMaestro(Maestro mae, string contrasena1, string contrasena2, bool activo)
+        public IActionResult EditarMaestro(Maestro mae, string contrasena1, string contrasena2, bool activo, string correo)
         {
             try
-            {
-               
+            {             
                 Repository<Maestro> repos = new Repository<Maestro>(context);
                 var maestro = repos.GetById(mae.Id);
                 if (contrasena1 == contrasena2)
@@ -202,7 +201,7 @@ namespace u4_2_RolesUsuario.Controllers
                     if (maestro != null)
                     {
                         maestro.Nombre = mae.Nombre;
-                        maestro.CorreoElectronico = mae.CorreoElectronico;
+                        maestro.CorreoElectronico = correo;
                         maestro.Grupo = mae.Grupo;
 
                         maestro.Contrasena = Hashear(contrasena1);
@@ -244,7 +243,7 @@ namespace u4_2_RolesUsuario.Controllers
         {
           
             Repository<Alumno> repos = new Repository<Alumno>(context);
-            if (User.IsInRole("Maestro"))
+            if (User.IsInRole("VerMaestro"))
             {
                 var currentMaestro = User.Claims.FirstOrDefault(x => x.Type == "Nombre").Value;
                 var maestrobd = context.Maestro.FirstOrDefault(x => x.Nombre == currentMaestro.ToString());
