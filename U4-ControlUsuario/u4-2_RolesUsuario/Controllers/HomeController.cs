@@ -138,7 +138,7 @@ namespace u4_2_RolesUsuario.Controllers
 
 
         [HttpPost]
-        public IActionResult AgregarDocente(Maestro mae, string contrasena1, string contrasena2, string correo)
+        public IActionResult AgregarDocente(Maestro mae, string contrasena1, string contrasena2)
         {
             try
             {
@@ -156,7 +156,7 @@ namespace u4_2_RolesUsuario.Controllers
                     {
                         mae.Contrasena = Hashear(contrasena1);
                         mae.Activo = 1;
-                        mae.CorreoElectronico = correo;
+                       // mae.CorreoElectronico = correo;
                         repos.Insert(mae);
                         return RedirectToAction("VerMaestros");
                     }
@@ -177,7 +177,8 @@ namespace u4_2_RolesUsuario.Controllers
 
         [Authorize(Roles = "Director")]
         public IActionResult EditarMaestro(int id)
-        {            
+        {
+            
             Repository<Maestro> repos = new Repository<Maestro>(context);
             var mae = repos.GetById(id);
             if (mae == null)
@@ -340,43 +341,19 @@ namespace u4_2_RolesUsuario.Controllers
         public IActionResult EditarAlumno(Alumno alu)
         {
             try
-            {
+            {               
                 Repository<Alumno> repos = new Repository<Alumno>(context);
-                var alumnobd = context.Alumno.FirstOrDefault(x => x.Nombre == alu.Nombre).Nombre;
+                var alumnobd = context.Alumno.FirstOrDefault(x => x.Id == alu.Id);
 
-                if (User.IsInRole("Maestro"))
+                if (alumnobd != null)
                 {
-                    var currentMaestro = User.Claims.FirstOrDefault(x => x.Type == "Nombre").Value;
-
-                    var maestrobd = context.Maestro.FirstOrDefault(x => x.Nombre == currentMaestro.ToString());
-
-
-                    if (maestrobd.Grupo == alu.Grupo)
-                    {
-                        alumnobd = alu.Nombre;
-                        repos.Update(alu);
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "No puede agregar un alumno a otro grupo.");
-                        return View(alu);
-                    }
+                    alumnobd.Nombre = alu.Nombre;
+                    repos.Update(alumnobd);
                 }
-                else //Claim Director
+                else
                 {
-                    var temp = context.Maestro.FirstOrDefault(x => x.Grupo == alu.Grupo).Id;
-                    var activoTemp = context.Maestro.FirstOrDefault(x => x.Id == temp).Activo;
-
-                    if (activoTemp == 1)
-                    {
-                        alumnobd = alu.Nombre;
-                        repos.Update(alu);
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "No puede editar un alumno a un maestro no activo.");
-                        return View(alu);
-                    }
+                    ModelState.AddModelError("", "No se encontró el alumno seleccionado.");
+                    return View(alu);
                 }
                 return RedirectToAction("VerAlumnos");
             }
