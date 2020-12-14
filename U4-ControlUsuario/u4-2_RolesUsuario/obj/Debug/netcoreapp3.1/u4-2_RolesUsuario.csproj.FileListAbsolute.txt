@@ -133,3 +133,4 @@ C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\P
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\u4-2_RolesUsuario\obj\Debug\netcoreapp3.1\u4-2_RolesUsuario.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\u4-2_RolesUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\Denegado.cshtml.g.cs
 C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\u4-2_RolesUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\esme_\OneDrive\Documentos\SEPTIMO SEMESTRE\PROGRAMACION-WEB\Practicas\PrograWeb-U4\U4-ControlUsuario\u4-2_RolesUsuario\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ViewImports.cshtml.g.cs

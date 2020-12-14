@@ -111,7 +111,7 @@ namespace u4_2_RolesUsuario.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]
+        
         public async Task<IActionResult> CerrarSesion()
         {
             await HttpContext.SignOutAsync();
@@ -138,7 +138,7 @@ namespace u4_2_RolesUsuario.Controllers
 
 
         [HttpPost]
-        public IActionResult AgregarDocente(Maestro mae, string contrasena1, string contrasena2)
+        public IActionResult AgregarDocente(Maestro mae, string contrasena1, string contrasena2, string correo)
         {
             try
             {
@@ -156,6 +156,7 @@ namespace u4_2_RolesUsuario.Controllers
                     {
                         mae.Contrasena = Hashear(contrasena1);
                         mae.Activo = 1;
+                        mae.CorreoElectronico = correo;
                         repos.Insert(mae);
                         return RedirectToAction("VerMaestros");
                     }
@@ -219,7 +220,7 @@ namespace u4_2_RolesUsuario.Controllers
                     else
                     {
                         ModelState.AddModelError("", "No existe el maestro seleccionado.");
-                        return RedirectToAction("Maestros");
+                        return RedirectToAction("VerMaestros");
                     }
                 }
                 else
@@ -234,14 +235,25 @@ namespace u4_2_RolesUsuario.Controllers
                 ModelState.AddModelError("", ex.Message);
                 return View(mae);
             }
-            return RedirectToAction("Maestros");
+            return RedirectToAction("VerMaestros");
         }
 
 
         public IActionResult VerAlumnos()
-        {            
+        {
+          
             Repository<Alumno> repos = new Repository<Alumno>(context);
-            return View(repos.GetAll().OrderBy(x => x.Grupo));
+            if (User.IsInRole("Maestro"))
+            {
+                var currentMaestro = User.Claims.FirstOrDefault(x => x.Type == "Nombre").Value;
+                var maestrobd = context.Maestro.FirstOrDefault(x => x.Nombre == currentMaestro.ToString());
+
+                return View(repos.GetAll().OrderBy(x => x.Grupo).Where(x => x.IdMaestro == maestrobd.Id));
+            }
+            else
+            {
+                return View(repos.GetAll().OrderBy(x => x.Grupo));
+            }
         }
 
         [Authorize(Roles = "Director, Maestro")]

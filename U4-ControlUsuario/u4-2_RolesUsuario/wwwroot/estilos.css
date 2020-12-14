@@ -1,0 +1,40 @@
+﻿body {
+    width:50%;
+    margin:auto;
+}
+
+*{
+    margin:0px;
+    font-family:Arial;
+}
+
+header {
+    background-color:lavender;
+    font-size:20px;
+}
+
+.link {
+    text-decoration: none;
+    color:blue;
+}
+
+.boton {
+    display: block;
+    margin-bottom: 10px;   
+    width: 120px;
+    height: 35px;
+    background-color: lavender;
+    border-color: lavender;
+}
+
+
+.titulo {
+    align-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
+    font-family: Arial;
+}
+
+
+
