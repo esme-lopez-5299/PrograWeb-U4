@@ -36,5 +36,14 @@ header {
     font-family: Arial;
 }
 
+.botonprincipal {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    background-color: lavender;
+    border-color: lavender;
+}
+
 
 

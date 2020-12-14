@@ -57,7 +57,6 @@ namespace u4_2_RolesUsuario.Repositories
 
         public virtual bool Validate(T entidad)
         {
-            //Falta hacer validaciones
             return true;
         }
 
