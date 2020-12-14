@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<h2 id="titulo">Iniciar Sesión</h2>
+
+<div>
+    <form method="post" action="~/Home/IniciarSesion">
+        <label >Correo electrónico:</label>
+        <input class="field" type="email" id="txtIniciarSesion" name="correo" required /><br /><br />
+
+        <label >Contraseña:</label>
+        <input class="field" type="password" id="txtPassword" name="password" required /><br />
+                                                                                         <p>@Html.ValidationSummary()</p>
+        <input class="boton" type="submit" value="Iniciar Sesión" />
+
+    </form>
+</div>

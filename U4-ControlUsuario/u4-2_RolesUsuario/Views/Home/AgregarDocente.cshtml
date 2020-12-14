@@ -1,0 +1,30 @@
+﻿@model u4_2_RolesUsuario.Models.Maestro
+@{
+    Layout = "_Layout";
+}
+
+<h2 id="titulo">Agregar docente</h2>
+
+<div>
+    <form method="post" action="~/Home/AgregarDocente">
+        <label id="nombremaestro">Nombre del docente:</label>
+        <input class="field" type="text" id="txtIniciarSesion" name="nombre" required asp-for="Nombre" /><br /><br />
+
+        <label>Correo:</label>
+        <input class="field" type="email" id="txtIniciarSesion" name="correo" required asp-for="CorreoElectronico" /><br /><br />
+
+        <label>Grupo:</label>
+        <input class="field" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+
+        <label>Contraseña:</label>
+        <input class="field" type="password" id="txtPassword" name="contrasena1" required /><br /><br />
+
+        <label>Confirmar contraseña:</label>
+        <input class="field" type="password" id="txtPassword" name="contrasena2" required /><br />
+
+        @Html.ValidationSummary()
+        <input class="botones" type="submit" value="Agregar" />
+        <a href="~/Home/VerMaestros"><input class="botones" type="submit" value="Cancelar" /></a>
+
+    </form>
+</div>

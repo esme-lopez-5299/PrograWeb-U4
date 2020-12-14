@@ -1,0 +1,36 @@
+﻿@model IEnumerable<u4_2_RolesUsuario.Models.Maestro>
+
+@{
+    Layout = "_Layout";
+}
+
+<h2 id="titulo">Maestros de la institución</h2>
+
+<div>
+    <table>
+
+        <caption id="agregar" style="text-align: right; margin-bottom: 10px; text-decoration: none; text-transform: uppercase; color: black;">
+            <a href="~/Home/AgregarMaestro" id="b">Agregar Maestro</a><br />
+        </caption>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>Nombre</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td style="text-align:center;">@item.Activo</td>
+                    <td class="nombre" style="text-align:center;">@item.Nombre</td>
+                    <td id="acc" style="text-align:center;">
+                        <a href="/Home/EditarMaestro/@(item.Id)">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+
+</div>

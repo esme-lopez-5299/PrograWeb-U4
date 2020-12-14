@@ -1,0 +1,53 @@
+﻿@model IEnumerable<u4_2_RolesUsuario.Models.Alumno>
+
+@{
+    Layout = "_Layout";
+}
+
+<h2 id="titulo">Alumnos inscritos</h2>
+
+<div>
+    <table>
+        <colgroup>
+            <col style="width:20%" />
+            <col style="width:60%" />
+            <col style="width:20%" />
+        </colgroup>
+        <caption id="agregar" style="text-align: right; margin-bottom: 10px; text-decoration: none; text-transform: uppercase; color: black;">
+            <a href="~/Home/AgregarAlumno" id="b">Agregar Alumno</a><br />
+        </caption>
+        <thead>
+            <tr>
+                <th>Grupo</th>
+                <th>Nombre</th>
+                <th>Editar/Eliminar</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td style="text-align:center;">@item.Grupo</td>
+                    <td class="nombre" style="text-align:center;">@item.Nombre</td>
+                    <td id="acc" style="text-align:center;">
+                        <a href="/Home/EditarAlumno/@(item.Id)">Editar</a>
+                        <a href="javascript:eliminar(@item.Id)">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+
+    <form method="post" action="~/Home/EliminarAlumno">
+        <input type="hidden" name="Id" id="alumnoid" />
+    </form>
+
+    <script>
+        function eliminar(id) {
+            if (confirm('¿Está seguro de eliminar el alumno seleccionado?')) {
+                document.getElementById("alumnoid").value = id;
+                document.querySelector("form").submit();
+            }
+        }
+    </script>
+</div>

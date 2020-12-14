@@ -1,0 +1,34 @@
+﻿@model u4_2_RolesUsuario.Models.Maestro
+@{
+    Layout = "_Layout";
+}
+
+<h2 id="titulo">Editar Maestro</h2>
+
+<div>
+    <form method="post" action="~/Home/EditarMaestro">
+        <input type="hidden" asp-for="Id" />
+        <label id="nombremaestro">Nombre del maestro:</label>
+        <input class="field" type="text" id="txtIniciarSesion" name="nombre" required asp-for="Nombre" /><br /><br />
+
+        <label>Correo:</label>
+        <input class="field" type="email" id="txtIniciarSesion" name="correo" required asp-for="CorreoElectronico" /><br /><br />
+
+        <label>Grupo del maestro:</label>
+        <input class="field" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+
+        <label>Contraseña del maestro:</label>
+        <input class="field" type="password" id="txtPassword" name="contrasena1" required /><br /><br />
+
+        <label>Confirmar contraseña:</label>
+        <input class="field" type="password" id="txtPassword" name="contrasena2" required /><br /><br />
+
+        <input type="checkbox" name="activo" value="true" />
+        <label>Activar Maestro</label>
+
+        @Html.ValidationSummary()
+        <input class="boton" type="submit" value="Guardar" />
+        <a href="~/Home/VerMaestros" class="link"><input class="boton" type="submit" value="Cancelar" /></a>
+
+    </form>
+</div>

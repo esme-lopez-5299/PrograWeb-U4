@@ -1,0 +1,19 @@
+﻿@model u4_2_RolesUsuario.Models.Alumno
+@{
+    ViewData["Title"] = "AgregarAlumno";
+}
+
+<h2 id="titulo">Agregar Alumno</h2>
+
+<div>
+    <form method="post" action="~/Home/AgregarAlumno">
+        <label id="nombremaestro">Nombre del alumno:</label>
+        <input class="field" type="text" id="txtIniciarSesion" name="nombre" asp-for="Nombre" required /><br /><br />
+        <label>Grupo:</label>
+        <input class="field" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+        <p>@Html.ValidationSummary()</p>
+        <input type="submit" class="boton" value="Agregar" />
+        <a href="~/Home/VerAlumnos"><input class="boton" type="submit" value="Cancelar" /></a>
+
+    </form>
+</div>

@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<h2 id="titulo">Menú Inicial</h2>
+
+<div>
+    <form method="post" action="~/Home/IniciarSesion">
+        @if (User.IsInRole("Director"))
+        {
+            
+            <a href="~/Home/VerMaestros" class="link">
+                <input type="button" class="botonInicio" value="Ver maestros" />
+                </a><br />
+        }
+        
+        <a href="~/Home/Alumnos" class="link">
+            <input type="button" class="botonInicio" value="Ver alumnos" />
+        </a>
+
+    </form>
+</div>

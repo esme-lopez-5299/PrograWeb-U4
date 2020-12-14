@@ -1,0 +1,20 @@
+﻿@model u4_2_RolesUsuario.Models.Alumno
+@{
+    Layout = "_Layout";
+}
+
+<h2 id="titulo">Editar</h2>
+
+<div>
+    <form method="post" action="~/Home/EditarAlumno">
+        <input type="hidden" asp-for="Id" />
+        <label id="nombremaestro">Nombre del alumno:</label>
+        <input class="field" type="text" id="txtIniciarSesion" name="nombre" required asp-for="Nombre" /><br /><br />
+        <label class="lblInfo">Grupo:</label>
+        <input class="field" readonly="readonly" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+        <p>@Html.ValidationSummary()</p>
+        <input class="boton" type="submit" value="Aceptar" />
+        <a href="~/Home/VerAlumnos"><input class="botones" type="submit" value="Cancelar" /></a>
+
+    </form>
+</div>
