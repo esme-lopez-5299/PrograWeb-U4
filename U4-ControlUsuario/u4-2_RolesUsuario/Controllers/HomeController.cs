@@ -174,7 +174,7 @@ namespace u4_2_RolesUsuario.Controllers
                     {
                         maestroP.Contrasena = Hashear(contrasena1);
                         maestroP.Activo = 1;
-                       // mae.CorreoElectronico = correo;
+                        //maestroP.CorreoElectronico = correo;
                         repos.Insert(maestroP);
                         return RedirectToAction("VerMaestros");
                     }
@@ -208,7 +208,7 @@ namespace u4_2_RolesUsuario.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarMaestro(Maestro maestroP, string contrasena1, string contrasena2, bool activo, string correo)
+        public IActionResult EditarMaestro(Maestro maestroP, string contrasena1, string contrasena2, bool activo)
         {
             try
             {             
@@ -219,7 +219,7 @@ namespace u4_2_RolesUsuario.Controllers
                     if (maestro != null)
                     {
                         maestro.Nombre = maestroP.Nombre;
-                        maestro.CorreoElectronico = correo;
+                       // maestro.CorreoElectronico = correo;
                         maestro.Grupo = maestroP.Grupo;
 
                         maestro.Contrasena = Hashear(contrasena1);

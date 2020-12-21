@@ -4,23 +4,24 @@
     Layout = "_Layout";
 }
 
-<h2 id="titulo">Alumnos inscritos</h2>
 
-<div class="divMain">
-    <table>
+
+<div class="central">
+    <h2 class="titulo">Alumnos inscritos</h2>
+    <table class="tabla">
         <colgroup>
             <col style="width:20%" />
             <col style="width:60%" />
             <col style="width:20%" />
         </colgroup>
-        <caption id="agregar" style="text-align: right; margin-bottom: 10px; text-decoration: none; text-transform: uppercase; color: black;">
-            <a href="~/Home/AgregarAlumno" id="b">Agregar Alumno</a><br />
+        <caption class="agregar" >
+            <a class="link" href="~/Home/AgregarAlumno" id="b">Agregar</a><br />
         </caption>
         <thead>
             <tr>
                 <th>Grupo</th>
                 <th>Nombre</th>
-                <th>Editar/Eliminar</th>
+                <th>Accion</th>
             </tr>
         </thead>
         @foreach (var item in Model)
@@ -30,8 +31,8 @@
                     <td style="text-align:center;">@item.Grupo</td>
                     <td class="nombre" style="text-align:center;">@item.Nombre</td>
                     <td id="acc" style="text-align:center;">
-                        <a href="/Home/EditarAlumno/@(item.Id)">Editar</a>
-                        <a href="javascript:eliminar(@item.Id)">Eliminar</a>
+                        <a class="link" href="/Home/EditarAlumno/@(item.Id)">Editar</a>
+                        <a class="link" href="javascript:eliminar(@item.Id)">Eliminar</a>
                     </td>
                 </tr>
             </tbody>

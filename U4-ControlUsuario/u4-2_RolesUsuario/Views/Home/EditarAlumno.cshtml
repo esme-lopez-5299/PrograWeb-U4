@@ -3,18 +3,33 @@
     Layout = "_Layout";
 }
 
-<h2 id="titulo">Editar</h2>
 
-<div>
+
+<div class="central">
+    <h2 class="titulo">Editar</h2>
     <form method="post" action="~/Home/EditarAlumno">
         <input type="hidden" asp-for="Id" />
-        <label id="nombremaestro">Nombre del alumno:</label>
-        <input class="field" type="text" id="txtIniciarSesion" name="nombre" required asp-for="Nombre" /><br /><br />
-        <label class="lblInfo">Grupo:</label>
-        <input class="field" readonly="readonly" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+        <table class="tabla">
+            <tr>
+                <td>
+                    <label id="nombremaestro">Nombre del alumno:</label>
+                </td>
+                <td>
+                    <input class="field" type="text" id="txtIniciarSesion" name="nombre" required asp-for="Nombre" /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="lblInfo">Grupo:</label>
+                </td>
+                <td>
+                    <input class="field" readonly="readonly" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+                </td>
+            </tr>
+        </table>                               
         <p>@Html.ValidationSummary()</p>
         <input class="boton" type="submit" value="Aceptar" />
-        <a href="~/Home/VerAlumnos"><input class="boton" type="submit" value="Cancelar" /></a>
+        <a href="~/Home/VerAlumnos" class="link"><input class="boton" type="button" value="Cancelar" /></a>
 
     </form>
 </div>

@@ -11,15 +11,20 @@
 <body>
     <header>
         <h1>UNIDAD 4. SEGURIDAD</h1>
-        <p id="IniciarSesion">
-            <a href="~/Home/Index">@User.Identity.Name</a>
-            <a href="~/Home/IniciarSesion">Iniciar Sesión</a>
-            <a href="~/Home/CerrarSesion">Cerrar Sesión</a>
+        <p id="menu">
+            <a class="link" href="~/Home/Index">Inicio</a>
+            <a class="link" href="~/Home/Index">@User.Identity.Name</a>
+            <a class="link" href="~/Home/IniciarSesion">Iniciar Sesión</a>
+            <a class="link" href="~/Home/CerrarSesion">Cerrar Sesión</a>
         </p>
     </header>
     <main>
         @RenderBody()
     </main>
-   
+    <footer>
+        <h6>Trabajo realizado por Esmeralda Lopez Muñoz</h6>
+    </footer>
+
 </body>
+
 </html>

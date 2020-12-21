@@ -4,17 +4,33 @@
 }
 
 
-<h2 id="titulo">Agregar Alumno</h2>
 
-<div>
+<div class="central">
+    <h2 class="titulo">Agregar Alumno</h2>
+
     <form method="post" action="~/Home/AgregarAlumno">
-        <label id="nombremaestro">Nombre del alumno:</label>
-        <input class="field" type="text" id="txtIniciarSesion" name="nombre" asp-for="Nombre" required /><br /><br />
-        <label>Grupo:</label>
-        <input class="field" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+        <table class="tabla">
+            <tr>
+                <td>
+                    <label id="nombremaestro">Nombre del alumno:</label>
+                </td>
+                <td>
+                    <input class="field" type="text" id="txtIniciarSesion" name="nombre" asp-for="Nombre" required /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Grupo:</label>
+                </td>
+                <td>
+                    <input class="field" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+                </td>
+            </tr>
+        </table>
+
         <p>@Html.ValidationSummary()</p>
         <input type="submit" class="boton" value="Agregar" />
-        <a href="~/Home/VerAlumnos"><input class="boton" type="submit" value="Cancelar" /></a>
+        <a class="link" href="~/Home/VerAlumnos"><input class="boton" type="button" value="Cancelar" /></a>
 
     </form>
 </div>

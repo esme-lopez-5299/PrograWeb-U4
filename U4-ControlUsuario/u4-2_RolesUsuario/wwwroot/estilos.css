@@ -1,11 +1,14 @@
-﻿body {
-    width:50%;
+﻿html{
+    width:100%;
+}
+body {
+    width:100%;
     margin:auto;
 }
 
 *{
     margin:0px;
-    font-family:Arial;
+    font-family:Calibri;
 }
 
 header {
@@ -13,18 +16,64 @@ header {
     font-size:20px;
 }
 
+header h1{
+    text-align:center;
+}
+
+header #menu a{
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    color:black;
+}
+
+#menu{
+    display:block;
+    text-align:center;
+}
+
+footer {
+    background-color:lavender;
+    width: 100%;
+    height: 25px;
+    position: fixed;
+    z-index: 100;
+    top: 96%;
+    left: 0;
+    clear: both;
+}
+
+    footer h6 {
+        height: 18px;
+        margin: 0px;
+        font-size: 18px;
+        text-align: center;
+        align-items:center;
+        vertical-align: middle;
+        line-height:25px;
+    }
+
 .link {
     text-decoration: none;
     color:blue;
 }
 
 .boton {
-    display: block;
-    margin-bottom: 10px;   
+    display: block;   
     width: 120px;
     height: 35px;
     background-color: lavender;
     border-color: lavender;
+   align-content:center;
+   margin:auto;
+}
+
+.tabla{
+    margin-left:40px;
+}
+
+.activocheck {
+    margin-left: 100px;
 }
 
 
@@ -32,7 +81,7 @@ header {
     align-content: center;
     text-align: center;
     font-size: 25px;
-    margin: 20px;
+    margin: auto;
     font-family: Arial;
 }
 
@@ -43,6 +92,19 @@ header {
     height: 35px;
     background-color: lavender;
     border-color: lavender;
+}
+
+.central {
+
+    width:30%;
+    margin:auto;
+}
+
+.agregar {
+    text-align: right; 
+    margin-bottom: 10px;
+    text-decoration: none;      
+    color: black;
 }
 
 

@@ -3,20 +3,21 @@
     Layout = "_Layout";
 }
 
-<h2 id="titulo">Menú Inicial</h2>
 
-<div>
+
+<div class="central">
+    <h2 class="titulo">Menú Inicial</h2>
     <form method="post" action="~/Home/IniciarSesion">
         @if (User.IsInRole("Director"))
         {
-            
+
             <a href="~/Home/VerMaestros" class="link">
-                <input type="button" class="boton" value="Ver maestros" />
-                </a><br />
+                <input type="button" class="botonprincipal" value="Ver maestros" />
+            </a><br />
         }
-        
+
         <a href="~/Home/VerAlumnos" class="link">
-            <input type="button" class="boton" value="Ver alumnos" />
+            <input type="button" class="botonprincipal" value="Ver alumnos" />
         </a>
 
     </form>

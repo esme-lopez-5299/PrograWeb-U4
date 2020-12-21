@@ -3,28 +3,58 @@
     Layout = "_Layout";
 }
 
-<h2 id="titulo">Agregar docente</h2>
 
-<div>
+
+<div class="central">
+    <h2 class="titulo">Agregar docente</h2>
     <form method="post" action="~/Home/AgregarDocente">
-        <label id="nombremaestro">Nombre del docente:</label>
-        <input class="field" type="text" id="txtIniciarSesion" name="nombre" required asp-for="Nombre" /><br /><br />
-
-        <label>Correo:</label>
-        <input class="field" type="email" id="txtIniciarSesion" name="correo" required asp-for="CorreoElectronico" /><br /><br />
-
-        <label>Grupo:</label>
-        <input class="field" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
-
-        <label>Contraseña:</label>
-        <input class="field" type="password" id="txtPassword" name="contrasena1" required /><br /><br />
-
-        <label>Confirmar contraseña:</label>
-        <input class="field" type="password" id="txtPassword" name="contrasena2" required /><br />
+        <table class="tabla">
+            <tr>
+                <td>
+                    <label id="nombremaestro">Nombre del docente:</label>
+                </td>
+                <td>
+                    <input class="field" type="text" id="txtIniciarSesion" name="nombre" required asp-for="Nombre" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Correo:</label>
+                </td>
+                <td>
+                    <input class="field" type="email" id="txtIniciarSesion" required asp-for="CorreoElectronico" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Grupo:</label>
+                </td>
+                <td>
+                    <input class="field" type="text" id="txtIniciarSesion" name="grupo" required asp-for="Grupo" /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Contraseña:</label>
+                </td>
+                <td>
+                    <input class="field" type="password" id="txtPassword" name="contrasena1" required /><br /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirmar contraseña:</label>
+                </td>
+                <td>
+                    <input class="field" type="password" id="txtPassword" name="contrasena2" required /><br />
+                </td>
+            </tr>
+        </table>
+               
 
         @Html.ValidationSummary()
-        <input class="botones" type="submit" value="Agregar" />
-        <a href="~/Home/VerMaestros"><input class="botones" type="submit" value="Cancelar" /></a>
+        <input class="boton" type="submit" value="Agregar" />
+        <a href="~/Home/VerMaestros" class="link"><input class="boton" type="button" value="Cancelar" /></a>
 
     </form>
 </div>
